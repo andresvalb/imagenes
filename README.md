@@ -21,7 +21,7 @@ salida por consola de la ejecucion.
 
 Con esto ya tenemos desplegada el api-rest.
 
-Disponibilizo un proyecto en postman para realizar pruebas.
+disponibilizo un proyecto en postman para realizar pruebas.
 
 [Descargar Proyecto Postman](https://raw.githubusercontent.com/andresvalb/imagenes/main/Api-Usuarios.postman_collection.json "download")
 
@@ -67,7 +67,7 @@ Response :
 
 ## Creacion de usuario.
 
-POST -> localhost:8080/users
+POST -> localhost:8080/api/v1/users
 
 ### header
 ```
@@ -109,7 +109,7 @@ response :
 
 ## Modificacion de usuario.
 
-PUT -> localhost:8080/users/juan3@rodriguez.org
+PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
 
 ### header
@@ -143,7 +143,7 @@ response :
 
 ## REcuperar informacion de un usaurio.
 
-GET -> localhost:8080/users/juan3@rodriguez.org
+GET -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
 
 ### header
