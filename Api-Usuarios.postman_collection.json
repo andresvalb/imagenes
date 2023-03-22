@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "634c1a24-5e66-4992-8324-54747a200ede",
+		"name": "Api-Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4759173"
+	},
+	"item": [
+		{
+			"name": "Crear usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ0MjgyMSwiaWF0IjoxNjc5NDM2ODIxfQ.dO9CLKeMTl1MygLb6uNFGHLvmDOoIP-8jFYfrxi7oKMqy-uHNzZdWj1XQJmswaMPs2iyL2vmn1h6f8W8P7D_0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gregorio Valenzuela\",\r\n    \"email\": \"juan3@rodriguez.org\",\r\n    \"password\": \"andresxx3X\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"2\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"3\",\r\n            \"contrycode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario.",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTM1NzQ1OSwiaWF0IjoxNjc5MzUxNDU5fQ.d-PlH3sGH30gMkr4NmC5kbs1KUbS3QZI0N-fWGG_hsjJTtnshTh6OitOKjZ1YpwAPpV-sDoQJ2ZKcyDS3DZ-ew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gregorio Valenzuela d\",\r\n    \"password\": \"andresxx3X\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/juan3@rodriguez.org",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"juan3@rodriguez.org"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera la informacion de un Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTM1ODEyMiwiaWF0IjoxNjc5MzUyMTIyfQ.4CV8VEVLQoqp2i0Yg3Bp1_VYT1hpTXERd-xqt9hCVMKjQ_Fl2SsRvqqeJa4jwF9N3MoI8ggQNtpi7rRwdalbVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/users/juan3@rodriguez.org",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"juan3@rodriguez.org"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"andresvalb@gmail.com\",\r\n    \"password\":\"hunter123X\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"andresvalb@gmail.com\",\r\n    \"password\":\"hunter123X\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recupero todo los telefonos de un usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ0MjgyMSwiaWF0IjoxNjc5NDM2ODIxfQ.dO9CLKeMTl1MygLb6uNFGHLvmDOoIP-8jFYfrxi7oKMqy-uHNzZdWj1XQJmswaMPs2iyL2vmn1h6f8W8P7D_0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/juan3@rodriguez.org/phones",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"juan3@rodriguez.org",
+						"phones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recupero un telefono por id de un usuario.",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ0MjgyMSwiaWF0IjoxNjc5NDM2ODIxfQ.dO9CLKeMTl1MygLb6uNFGHLvmDOoIP-8jFYfrxi7oKMqy-uHNzZdWj1XQJmswaMPs2iyL2vmn1h6f8W8P7D_0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/juan3@rodriguez.org/phones",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"juan3@rodriguez.org",
+						"phones"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
