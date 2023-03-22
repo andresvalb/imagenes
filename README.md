@@ -9,12 +9,21 @@ Api construidad con:
 - Seguridad con token JWT
 - Base datos H2 (base datos en memoria.).
 
+<br>
 
-## Uso de la api.
+## Uso de la api.  
+<br>
 
-Descargar el repositorio: https://github.com/andresvalb/api-usuarios.git
+1. Descargar el repositorio: https://github.com/andresvalb/api-usuarios.git
 
-En la raiz del proyecto ejecutar el comando de maven: mvn spring-boot:run
+2. En el archivo \api-usuarios\src\main\resources\application.properties, se puede configurar la validacion del formato del password
+
+```
+#expresion regular para validar formato del password.
+valida.password=^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{10}$
+```
+
+3. En la raiz del proyecto ejecutar el comando de maven: mvn spring-boot:run
 
 salida por consola de la ejecucion.
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/consolamaven.png)
