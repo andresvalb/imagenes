@@ -7,29 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "Crear usuario",
+			"name": "1. Get Token",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ0MjgyMSwiaWF0IjoxNjc5NDM2ODIxfQ.dO9CLKeMTl1MygLb6uNFGHLvmDOoIP-8jFYfrxi7oKMqy-uHNzZdWj1XQJmswaMPs2iyL2vmn1h6f8W8P7D_0w",
-							"type": "string"
-						}
-					]
-				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "",
-						"value": "",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Gregorio Valenzuela\",\r\n    \"email\": \"juan3@rodriguez.org\",\r\n    \"password\": \"andresxx3X\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"2\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"citycode\": \"3\",\r\n            \"contrycode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"username\":\"andresvalb@gmail.com\",\r\n    \"password\":\"hunter123X\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,12 +21,49 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/users",
+					"raw": "localhost:8080/api/v1/token",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5NDU5NTQ1LCJpYXQiOjE2Nzk0NTM1NDV9.IDnBV46YyEO7fkRenMrBJgeLY__fU9iG82s8eao5vAfimNd4_K9st9dVypt5iag7gQmFINSMwb1F5Ts1hz2cQA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Perez\",\r\n    \"email\": \"juan3@rodriguez.org\",\r\n    \"password\": \"andresxx3X\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"123456789\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"111223344\",\r\n            \"citycode\": \"2\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"11112222\",\r\n            \"citycode\": \"3\",\r\n            \"contrycode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
 						"users"
 					]
 				}
@@ -50,29 +71,19 @@
 			"response": []
 		},
 		{
-			"name": "Actualizar usuario.",
+			"name": "3. Actualizar usuario.",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTM1NzQ1OSwiaWF0IjoxNjc5MzUxNDU5fQ.d-PlH3sGH30gMkr4NmC5kbs1KUbS3QZI0N-fWGG_hsjJTtnshTh6OitOKjZ1YpwAPpV-sDoQJ2ZKcyDS3DZ-ew",
-							"type": "string"
-						}
-					]
-				},
 				"method": "PUT",
 				"header": [
 					{
-						"key": "",
-						"value": "",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NTAzNiwiaWF0IjoxNjc5NDQ5MDM2fQ.R1g2Cd-j6SGA6GJz36Dhltrpg3oGN6gnq7D5LoyhoEAhEVjbHjy3XByvgnSLCcpE2Jy5J7KSek_PKIYqAcH4-Q",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Gregorio Valenzuela d\",\r\n    \"password\": \"andresxx3X\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Juan Perez Fernandez\",\r\n    \"password\": \"andresxx3X\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -80,12 +91,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/users/juan3@rodriguez.org",
+					"raw": "localhost:8080/api/v1/users/juan3@rodriguez.org",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"juan3@rodriguez.org"
 					]
@@ -94,33 +107,25 @@
 			"response": []
 		},
 		{
-			"name": "Recupera la informacion de un Usuario",
+			"name": "4. Recupera la informacion de un Usuario",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTM1ODEyMiwiaWF0IjoxNjc5MzUyMTIyfQ.4CV8VEVLQoqp2i0Yg3Bp1_VYT1hpTXERd-xqt9hCVMKjQ_Fl2SsRvqqeJa4jwF9N3MoI8ggQNtpi7rRwdalbVw",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [
 					{
-						"key": "",
-						"value": "",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NTAzNiwiaWF0IjoxNjc5NDQ5MDM2fQ.R1g2Cd-j6SGA6GJz36Dhltrpg3oGN6gnq7D5LoyhoEAhEVjbHjy3XByvgnSLCcpE2Jy5J7KSek_PKIYqAcH4-Q",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "localhost:8080/users/juan3@rodriguez.org",
+					"raw": "localhost:8080/api/v1/users/juan3@rodriguez.org",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"juan3@rodriguez.org"
 					]
@@ -129,81 +134,25 @@
 			"response": []
 		},
 		{
-			"name": "Get Token",
+			"name": "5. Recupero telefonos de un usuario",
 			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\":\"andresvalb@gmail.com\",\r\n    \"password\":\"hunter123X\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/token",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"token"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Token Copy",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\":\"andresvalb@gmail.com\",\r\n    \"password\":\"hunter123X\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/token",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"token"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Recupero todo los telefonos de un usuario",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ0MjgyMSwiaWF0IjoxNjc5NDM2ODIxfQ.dO9CLKeMTl1MygLb6uNFGHLvmDOoIP-8jFYfrxi7oKMqy-uHNzZdWj1XQJmswaMPs2iyL2vmn1h6f8W8P7D_0w",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NTAzNiwiaWF0IjoxNjc5NDQ5MDM2fQ.R1g2Cd-j6SGA6GJz36Dhltrpg3oGN6gnq7D5LoyhoEAhEVjbHjy3XByvgnSLCcpE2Jy5J7KSek_PKIYqAcH4-Q",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "localhost:8080/users/juan3@rodriguez.org/phones",
+					"raw": "localhost:8080/api/v1/users/juan3@rodriguez.org/phones",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
+						"v1",
 						"users",
 						"juan3@rodriguez.org",
 						"phones"
@@ -213,30 +162,174 @@
 			"response": []
 		},
 		{
-			"name": "Recupero un telefono por id de un usuario.",
+			"name": "6. Recupero un telefono por id de un usuario.",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ0MjgyMSwiaWF0IjoxNjc5NDM2ODIxfQ.dO9CLKeMTl1MygLb6uNFGHLvmDOoIP-8jFYfrxi7oKMqy-uHNzZdWj1XQJmswaMPs2iyL2vmn1h6f8W8P7D_0w",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NTAzNiwiaWF0IjoxNjc5NDQ5MDM2fQ.R1g2Cd-j6SGA6GJz36Dhltrpg3oGN6gnq7D5LoyhoEAhEVjbHjy3XByvgnSLCcpE2Jy5J7KSek_PKIYqAcH4-Q",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "localhost:8080/users/juan3@rodriguez.org/phones",
+					"raw": "localhost:8080/api/v1/users/juan3@rodriguez.org/phones/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
+						"v1",
+						"users",
+						"juan3@rodriguez.org",
+						"phones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Agregar un telefono nuevo a la lista.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NTAzNiwiaWF0IjoxNjc5NDQ5MDM2fQ.R1g2Cd-j6SGA6GJz36Dhltrpg3oGN6gnq7D5LoyhoEAhEVjbHjy3XByvgnSLCcpE2Jy5J7KSek_PKIYqAcH4-Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"number\": \"666666666\",\r\n        \"citycode\": \"2\",\r\n        \"contrycode\": \"57\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/juan3@rodriguez.org/phones",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
 						"users",
 						"juan3@rodriguez.org",
 						"phones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Modificar un telefono.",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NTAzNiwiaWF0IjoxNjc5NDQ5MDM2fQ.R1g2Cd-j6SGA6GJz36Dhltrpg3oGN6gnq7D5LoyhoEAhEVjbHjy3XByvgnSLCcpE2Jy5J7KSek_PKIYqAcH4-Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"666666666\",\r\n    \"citycode\": \"6660\",\r\n    \"contrycode\": \"5215\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/juan3@rodriguez.org/phones/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"juan3@rodriguez.org",
+						"phones",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error email no valido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NDU1MCwiaWF0IjoxNjc5NDQ4NTUwfQ.azSBuSFmwDqZOlSHY3XpcTLuHSpyFxfYfJcTxsUX3xD-pKJwnhR4z1klNzMji6qyOKcTwyZ3oyXda6sNZVNs3Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Perez\",\r\n    \"email\": \"juan\",\r\n    \"password\": \"andresxx3X\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"123456789\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"111223344\",\r\n            \"citycode\": \"2\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"11112222\",\r\n            \"citycode\": \"3\",\r\n            \"contrycode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error formato de password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTQ1NDU1MCwiaWF0IjoxNjc5NDQ4NTUwfQ.azSBuSFmwDqZOlSHY3XpcTLuHSpyFxfYfJcTxsUX3xD-pKJwnhR4z1klNzMji6qyOKcTwyZ3oyXda6sNZVNs3Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Perez\",\r\n    \"email\": \"juan3@rodriguez.org\",\r\n    \"password\": \"andres\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"123456789\",\r\n            \"citycode\": \"1\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"111223344\",\r\n            \"citycode\": \"2\",\r\n            \"contrycode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"11112222\",\r\n            \"citycode\": \"3\",\r\n            \"contrycode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
 					]
 				}
 			},
