@@ -109,7 +109,7 @@ Response JSON:
 }
 ```
 
-
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/creacion-usuarios.png)
 
 
 ## Modificacion de usuario.
@@ -144,7 +144,7 @@ Response JSON:
 }
 ```
 
-
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/update-usuario.png)
 
 ## REcuperar informacion de un usaurio.
 
