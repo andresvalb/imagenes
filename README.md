@@ -89,7 +89,7 @@ Con el token generado podemos consumir los otros metodos de la api, el token se 
 
 POST -> localhost:8080/api/v1/users
 
-### header
+Header
 ```
 Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
 ```
@@ -132,7 +132,7 @@ Response JSON:
 PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
 
-### header
+Header
 ```
 Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
 ```
@@ -166,7 +166,7 @@ Response JSON:
 GET -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
 
-### header
+Header
 ```
 Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
 ```
