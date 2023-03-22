@@ -53,7 +53,7 @@ Disponibilizo un proyecto en postman para realizar pruebas.  [Descargar Proyecto
 <br>
 La api cuenta con un usuario ya creado: andresvalb@gmail.com y password: hunter123X
 
-## Generacion de token JWT.
+## 1. Generacion de token JWT.
 
 POST -> localhost:8080/api/v1/token
 
@@ -85,7 +85,7 @@ Con el token generado podemos consumir los otros metodos de la api, el token se 
 
 
 
-## Creacion de users.
+## 2. Creacion de users.
 
 POST -> localhost:8080/api/v1/users
 
@@ -127,7 +127,7 @@ Response JSON:
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/creacion-usuarios.png)
 
 
-## Modificacion de usuario.
+## 3. Modificacion de usuario.
 
 PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
@@ -161,7 +161,7 @@ Response JSON:
 
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/update-usuario.png)
 
-## Recuperar informacion de un usaurio.
+## 4. Recuperar informacion de un usaurio.
 
 GET -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
@@ -213,3 +213,185 @@ response :
 ```
 
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/get-usuarios.png)
+
+
+
+
+## 5. Recupero telefonos de un usuario.
+
+GET -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones
+
+
+Header
+```
+Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
+```
+
+request :
+
+```json
+
+```
+
+
+response :
+```json
+[
+    {
+        "id": 3,
+        "number": "123456789",
+        "citycode": "1",
+        "contrycode": "57"
+    },
+    {
+        "id": 2,
+        "number": "11112222",
+        "citycode": "3",
+        "contrycode": "57"
+    },
+    {
+        "id": 1,
+        "number": "111223344",
+        "citycode": "2",
+        "contrycode": "57"
+    }
+]
+```
+
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/5.png)
+
+
+## 6. Recupero un telefono por id de un usuario.
+
+GET -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones/1
+
+
+Header
+```
+Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
+```
+
+request :
+
+```json
+
+```
+
+
+response :
+```json
+[
+    {
+        "id": 3,
+        "number": "123456789",
+        "citycode": "1",
+        "contrycode": "57"
+    },
+    {
+        "id": 2,
+        "number": "11112222",
+        "citycode": "3",
+        "contrycode": "57"
+    },
+    {
+        "id": 1,
+        "number": "111223344",
+        "citycode": "2",
+        "contrycode": "57"
+    }
+]
+```
+
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/6.png)
+
+
+
+
+## 7. Agregar un telefono nuevo a la lista.
+
+POST -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones
+
+
+Header
+```
+Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
+```
+
+request :
+
+```json
+
+{
+    "number": "666666666",
+    "citycode": "2",
+    "contrycode": "57"
+}
+
+```
+
+
+response :
+```json
+[
+    {
+        "id": 3,
+        "number": "123456789",
+        "citycode": "1",
+        "contrycode": "57"
+    },
+    {
+        "id": 2,
+        "number": "11112222",
+        "citycode": "3",
+        "contrycode": "57"
+    },
+    {
+        "id": 1,
+        "number": "111223344",
+        "citycode": "2",
+        "contrycode": "57"
+    }
+]
+```
+
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/7.png)
+
+
+
+
+
+## 8. Modificar un telefono.
+
+PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones/4
+
+
+Header
+```
+Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
+```
+
+request :
+
+```json
+
+{
+    "number": "666666666",
+    "citycode": "6660",
+    "contrycode": "5215"
+}
+```
+
+
+response :
+```json
+{
+    "id": 4,
+    "number": "666666666",
+    "citycode": "6660",
+    "contrycode": "5215"
+}
+```
+
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/8.png)
+
+
