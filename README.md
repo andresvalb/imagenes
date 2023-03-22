@@ -146,7 +146,7 @@ Response JSON:
 
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/update-usuario.png)
 
-## REcuperar informacion de un usaurio.
+## Recuperar informacion de un usaurio.
 
 GET -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
@@ -196,3 +196,5 @@ response :
     ]
 }
 ```
+
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/get-usuarios.png)
