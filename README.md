@@ -70,7 +70,7 @@ Con el token generado podemos consumir los otros metodos de la api, el token se 
 
 
 
-## Creacion de usuario.
+## Creacion de users.
 
 POST -> localhost:8080/api/v1/users
 
@@ -79,7 +79,7 @@ POST -> localhost:8080/api/v1/users
 Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
 ```
 
-request :
+Request body JSON:
 
 ```json
 {
@@ -97,7 +97,7 @@ request :
 ```
 
 
-response :
+Response JSON:
 ```json
 {
     "id": "39d773ad-000b-4ef2-a366-931e08731312",
@@ -122,7 +122,7 @@ PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org
 Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuM0Byb2RyaWd1ZXoub3JnIiwiZXhwIjoxNjc5MzY4NTgxLCJpYXQiOjE2NzkzNjI1ODF9.eRHogNlacctrsndu08LySIphGCtHvD8bdhTCmAli-kDjmY0pNwsR6_9OYdr82iRZGf7i50e4ovlM_v5toJEWWw
 ```
 
-request :
+Request body JSON:
 
 ```json
 {
@@ -132,7 +132,7 @@ request :
 ```
 
 
-response :
+Response JSON:
 ```json
 {
     "id": "0e4c9199-9c8c-4959-a92e-a6a2bca465df",
