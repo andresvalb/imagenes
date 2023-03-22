@@ -10,7 +10,7 @@ Api construidad con:
 - Base datos H2.
 
 
-## Usu de la api.
+## Uso de la api.
 
 Descargar el repositorio: https://github.com/andresvalb/api-usuarios.git
 
@@ -21,6 +21,7 @@ salida por consola de la ejecucion.
 
 Con esto ya tenemos desplegada el api-rest.
 
+Disponibilizo un proyecto en postman para realizar pruebas.
 
 [Descargar Proyecto Postman](https://raw.githubusercontent.com/andresvalb/imagenes/main/Api-Usuarios.postman_collection.json "download")
 
@@ -35,14 +36,14 @@ Con esto ya tenemos desplegada el api-rest.
 
 ## Metodos
 
-La api por defecto se ha generado el usuario: andresvalb@gmail.com y password: hunter123X
+La api cuenta con un usuario ya creado: andresvalb@gmail.com y password: hunter123X
 
 ## Generacion de token JWT.
 
-POST -> localhost:8080/token
+POST -> localhost:8080/api/v1/token
 
 
-request :
+Request body:
 
 ```json
 {
@@ -52,12 +53,16 @@ request :
 ```
 
 
-response :
+Response :
 ```json
 {
   "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTM2OTk2MywiaWF0IjoxNjc5MzYzOTYzfQ.pAgAxr9ZV3OAFzot7bKUDs239HBaznD-T0Kf4mWJgp2W_xshjzc_H0rarEtpSr6__9sA_LReqbsF85fxOgLP2w"
 }
 ```
+
+
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/get-token-jwt.png)
+
 
 
 ## Creacion de usuario.
