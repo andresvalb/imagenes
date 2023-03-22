@@ -7,7 +7,7 @@ Api construidad con:
 - Java 11
 - Spring boot
 - Seguridad con token JWT
-- Base datos H2.
+- Base datos H2 (base datos en memoria.).
 
 
 ## Uso de la api.
