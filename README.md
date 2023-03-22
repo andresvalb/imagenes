@@ -1,5 +1,5 @@
 # api-usuarios (prueba bci)
-Api para gestionar usuarios, permite la creacion de usuarios y telefonos asociados a un usuario.
+Api que permite la creacion de usuarios y telefonos asociados.
 
 Api construidad con: 
 
@@ -66,7 +66,7 @@ Con el token generado podemos consumir los otros metodos de la api, el token se 
 
 
 
-![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/get-token-jwt.png)
+![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/header-Authorization.png)
 
 
 
