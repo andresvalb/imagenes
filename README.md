@@ -12,7 +12,7 @@ Api construidad con:
 <br>
 
 ## Uso de la api.  
-***
+
 <br>
 
 1. Descargar el repositorio: https://github.com/andresvalb/api-usuarios.git
@@ -48,7 +48,7 @@ Disponibilizo un proyecto en postman para realizar pruebas.  [Descargar Proyecto
 
 
 ## Metodos
-***
+
 
 <br>
 La api cuenta con un usuario ya creado: andresvalb@gmail.com y password: hunter123X
