@@ -43,7 +43,7 @@ La api cuenta con un usuario ya creado: andresvalb@gmail.com y password: hunter1
 POST -> localhost:8080/api/v1/token
 
 
-Request body:
+Request body JSON: 
 
 ```json
 {
@@ -53,12 +53,17 @@ Request body:
 ```
 
 
-Response :
+Response JSON:
 ```json
 {
   "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmRyZXN2YWxiQGdtYWlsLmNvbSIsImV4cCI6MTY3OTM2OTk2MywiaWF0IjoxNjc5MzYzOTYzfQ.pAgAxr9ZV3OAFzot7bKUDs239HBaznD-T0Kf4mWJgp2W_xshjzc_H0rarEtpSr6__9sA_LReqbsF85fxOgLP2w"
 }
 ```
+
+
+Con el token generado podemos consumir los otros metodos de la api, el token se debe pasar en el Header el parametro Authorization = token
+
+
 
 
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/get-token-jwt.png)
