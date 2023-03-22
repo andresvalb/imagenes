@@ -12,6 +12,7 @@ Api construidad con:
 <br>
 
 ## Uso de la api.  
+***
 <br>
 
 1. Descargar el repositorio: https://github.com/andresvalb/api-usuarios.git
@@ -21,7 +22,10 @@ Api construidad con:
 ```
 #expresion regular para validar formato del password.
 valida.password=^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{10}$
+
+Con esta expresion se valida que tenga un largo de 10, que tenga mayusculas, minusculas y numeros.
 ```
+
 
 3. En la raiz del proyecto ejecutar el comando de maven: mvn spring-boot:run
 
@@ -30,9 +34,7 @@ salida por consola de la ejecucion.
 
 Con esto ya tenemos desplegada el api-rest.
 
-disponibilizo un proyecto en postman para realizar pruebas.
-
-[Descargar Proyecto Postman](https://raw.githubusercontent.com/andresvalb/imagenes/main/Api-Usuarios.postman_collection.json "download")
+Disponibilizo un proyecto en postman para realizar pruebas.  [Descargar Proyecto Postman](https://raw.githubusercontent.com/andresvalb/imagenes/main/Api-Usuarios.postman_collection.json "download")
 
 
 
@@ -41,10 +43,14 @@ disponibilizo un proyecto en postman para realizar pruebas.
 
 
 
+<br>
+<br>
 
 
 ## Metodos
+***
 
+<br>
 La api cuenta con un usuario ya creado: andresvalb@gmail.com y password: hunter123X
 
 ## Generacion de token JWT.
