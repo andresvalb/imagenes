@@ -127,7 +127,7 @@ Response JSON:
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/creacion-usuarios.png)
 
 
-## 3. Modificacion de usuario.
+## 3. Modificacion de users.
 
 PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
@@ -161,7 +161,7 @@ Response JSON:
 
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/update-usuario.png)
 
-## 4. Recuperar informacion de un usaurio.
+## 4. Recuperar informacion de un users.
 
 GET -> localhost:8080/api/v1/users/juan3@rodriguez.org
 
@@ -217,7 +217,7 @@ response :
 
 
 
-## 5. Recupero telefonos de un usuario.
+## 5. Recupero phones de un users.
 
 GET -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones
 
@@ -261,7 +261,7 @@ response :
 ![Alt Text](https://raw.githubusercontent.com/andresvalb/imagenes/main/5.png)
 
 
-## 6. Recupero un telefono por id de un usuario.
+## 6. Recupero un phones por id de un users.
 
 GET -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones/1
 
@@ -307,7 +307,7 @@ response :
 
 
 
-## 7. Agregar un telefono nuevo a la lista.
+## 7. Agregar un phones nuevo a la lista.
 
 POST -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones
 
@@ -360,7 +360,7 @@ response :
 
 
 
-## 8. Modificar un telefono.
+## 8. Modificar un phone.
 
 PUT -> localhost:8080/api/v1/users/juan3@rodriguez.org/phones/4
 
